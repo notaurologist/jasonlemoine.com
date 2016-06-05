@@ -4,11 +4,11 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rimraf build",
+    "prebuild": "rimraf public",
     "build": "webpack",
     "build:dev": "NODE_ENV=development npm run build -- -d --config ./webpack/webpack.config.development.js",
     "build:prod": "NODE_ENV=production npm run build -- -p --config ./webpack/webpack.config.production.js",
-    "prestart": "npm run build:dev -- --watch",
+    "prestart": "npm run build:dev",
     "start": "firebase serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

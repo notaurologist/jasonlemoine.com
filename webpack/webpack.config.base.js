@@ -11,7 +11,7 @@ module.exports = (options) => ({
   devtool: options.devtool,
   entry: options.entry,
   output: Object.assign({
-    path: path.resolve(process.cwd(), 'build'),
+    path: path.resolve(process.cwd(), 'public'),
     publicPath: '/',
   }, options.output),
   module: {
