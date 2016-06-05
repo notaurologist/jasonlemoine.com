@@ -1,0 +1,68 @@
+{
+  "name": "jasonlemoine.com",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "webpack",
+    "build:dev": "NODE_ENV=development npm run build -- -d --config ./webpack/webpack.config.development.js",
+    "build:prod": "NODE_ENV=production npm run build -- -p --config ./webpack/webpack.config.production.js",
+    "prestart": "npm run build:dev -- --watch",
+    "start": "firebase serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notaurologist/jasonlemoine.com.git"
+  },
+  "keywords": [
+    "react",
+    "firebase"
+  ],
+  "author": "Jason LeMoine <github@lemoine.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notaurologist/jasonlemoine.com/issues"
+  },
+  "homepage": "https://github.com/notaurologist/jasonlemoine.com#readme",
+  "dependencies": {
+    "babel-runtime": "^6.9.2",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-react-constant-elements": "^6.9.1",
+    "babel-plugin-transform-react-inline-elements": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "css-mqpacker": "^5.0.1",
+    "eslint": "^2.11.1",
+    "eslint-plugin-react": "^5.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.19.0",
+    "json-loader": "^0.5.4",
+    "postcss-cssnext": "^2.6.0",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.9.1",
+    "postcss-remove-root": "0.0.2",
+    "progress-bar-webpack-plugin": "^1.8.0",
+    "rimraf": "^2.5.2",
+    "style-loader": "^0.13.1",
+    "stylelint": "^6.5.1",
+    "stylelint-config-standard": "^8.0.0",
+    "svg-sprite-loader": "0.0.19",
+    "svgo-loader": "^1.1.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  }
+}

@@ -1,0 +1,28 @@
+@import "../common/colors.css";
+
+.contact button,
+.contact input,
+.contact textarea {
+	border: 0;
+	padding: 1em;
+}
+
+.contact input,
+.contact textarea {
+	margin-bottom: 1em;
+}
+
+.contact textarea {
+	height: 10em;
+}
+
+.contact button {
+	background-color: var(--primaryColor);
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.contact > form {
+	display: flex;
+	flex-flow: column nowrap;
+}

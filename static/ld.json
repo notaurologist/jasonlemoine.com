@@ -1,0 +1,23 @@
+{
+	"@context" : "http://schema.org",
+	"@type" : "Person",
+	"name" : "Jason LeMoine",
+	"url" : "http://www.jasonlemoine.com",
+	"jobTitle" : "Lead Software Developer",
+	"address" : {
+		"addressLocality" : "Seattle",
+		"addressRegion" : "WA",
+		"addressCountry" : "US"
+	},
+	"sameAs" : [
+		"https://www.linkedin.com/in/jlemoine",
+		"https://www.github.com/notaurologist",
+		"https://www.twitter.com/notaurologist",
+		"https://www.last.fm/user/mrbaloo",
+		"https://getpocket.com/@notaurologist"
+	],
+	"description" : "Jason LeMoine - Front-end Web Developer",
+	"contactPoint" : {
+		"url" : "http://www.jasonlemoine.com/contact.html"
+	}
+}

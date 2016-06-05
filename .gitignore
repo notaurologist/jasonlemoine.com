@@ -1,0 +1,5 @@
+_site
+.DS_Store
+Gemfile.lock
+firebase-debug.log
+build

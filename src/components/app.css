@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@import "./common/colors.css";
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #333;
+	margin: 0;
+}
+
+main {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 120%;
+}
+
+button,
+input,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+p {
+	margin-top: 0;
+}
+
+a {
+	color: var(--primaryColor);
+	text-decoration: none;
+}
+
+.container {
+	background-color: #4d4d4d;
+	color: #ddcab8;
+	font-family: Roboto, "San Francisco", Helvetica, Arial, sans-serif;
+	margin: 0 auto;
+	max-width: 48em;
+	min-height: 100vh;
+	padding: 1em;
+}
+
+@media (min-width: 48em) {
+	.container {
+		padding: 2em;
+	}
+}
