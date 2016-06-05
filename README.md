@@ -1,4 +1,4 @@
-# notaurologist.github.io
+# jasonlemoine.com
 
 This is my personal "website". Basically just a bunch of links to other projects.
 
