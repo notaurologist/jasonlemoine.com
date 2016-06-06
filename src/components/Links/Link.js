@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import styles from './links.css';
-import Icon from '../common/Icon';
+import Icon from '../Icon/Icon';
 
 const Link = ({url, title, glyph}) => {
 	return (

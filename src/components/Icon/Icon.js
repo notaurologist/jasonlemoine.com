@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import styles from './icon.css';
 
 const Icon = ({glyph}) => (
-	<svg className={ styles.icon } role="img" aria-labeledby={ `title-${glyph} desc-${glyph}` }>
+	<svg className={ styles.icon } role="img">
 		<use xlinkHref={ glyph } />
 	</svg>
 );

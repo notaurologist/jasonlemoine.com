@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "./common/colors.css";
 
 html {
 	box-sizing: border-box;
@@ -33,7 +32,7 @@ p {
 }
 
 a {
-	color: var(--primaryColor);
+	color: #f7596a;
 	text-decoration: none;
 }
 

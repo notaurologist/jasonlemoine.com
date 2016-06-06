@@ -1,12 +1,35 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import styles from './links.css';
 import Link from './Link';
 
-const LinkMenu = ({links}) => (
+const links = [
+	{
+		url: '/contact',
+		title: 'Contact Me',
+		slug: 'envelope-o',
+	},
+	{
+		url: 'https://www.github.com/notaurologist',
+		title: 'GitHub',
+		slug: 'github',
+	},
+	{
+		url: 'https://www.linkedin.com/in/jlemoine',
+		title: 'LinkedIn',
+		slug: 'linkedin',
+	},
+	{
+		url: 'https://www.twitter.com/notaurologist',
+		title: 'Twitter',
+		slug: 'twitter',
+	},
+];
+
+const LinkMenu = () => (
 	<nav>
 		<ul className={ styles.links }>
 			{ links.map((link) => {
-				const glyph = require(`../../helpers/${link.slug}.svg`);
+				const glyph = require(`static/images/${link.slug}.svg`);
 				return (
 					<Link
 						key={ link.slug }
@@ -17,13 +40,5 @@ const LinkMenu = ({links}) => (
 		</ul>
 	</nav>
 );
-
-LinkMenu.propTypes = {
-	links: PropTypes.arrayOf(PropTypes.shape({
-		url: PropTypes.string,
-		title: PropTypes.string,
-		slug: PropTypes.string,
-	})).isRequired,
-};
 
 export default LinkMenu;

@@ -1,5 +1,3 @@
-@import "../common/colors.css";
-
 .contact button,
 .contact input,
 .contact textarea {
@@ -17,7 +15,7 @@
 }
 
 .contact button {
-	background-color: var(--primaryColor);
+	background-color: #f7596a;
 	color: #fff;
 	text-transform: uppercase;
 }
