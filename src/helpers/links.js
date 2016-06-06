@@ -1,6 +1,6 @@
 export default [
 	{
-		url: '/#/contact',
+		url: '/contact',
 		title: 'Contact Me',
 		slug: 'envelope-o',
 	},
