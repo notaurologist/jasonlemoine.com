@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRedirect, browserHistory} from 'react-router';
+import {Router, Route, IndexRedirect, Redirect, browserHistory} from 'react-router';
 import App from './components/App';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
@@ -13,7 +13,7 @@ ReactDOM.render(
 			<Route path="about" component={ About } />
 			<Route path="contact" component={ Contact } />
 			<Route path="contact/thanks" component={ Thanks } />
-			<Route path="*" component={ About } />
+			<Redirect from='*' to='/' />
 		</Route>
 	</Router>,
 	document.getElementById('app')
