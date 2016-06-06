@@ -11,7 +11,7 @@ module.exports = require('./webpack.config.base')({
     path.resolve('src/index.js'),
   ],
   output: {
-    filename: 'app.js',
+    filename: 'app.[hash].js',
   },
   cssLoaders: ExtractTextPlugin.extract('style', 'css?minimize&modules&importLoaders=1&localIdentName=[name]__[local]!postcss'),
   plugins: [
@@ -23,7 +23,7 @@ module.exports = require('./webpack.config.base')({
     }),
 		new webpack.optimize.OccurenceOrderPlugin(true),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new ExtractTextPlugin('app.css', {
+    new ExtractTextPlugin('app.[hash].css', {
       allChunks: true,
     }),
   ],
