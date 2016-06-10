@@ -18,7 +18,13 @@ module.exports = require('./webpack.config.base')({
     new ExtractTextPlugin('app.css', {
       allChunks: true,
     }),
-    new OfflinePlugin(),
+    new OfflinePlugin({
+      cache: {
+        main: ['index.html', '*.js', '*.css', '*.json'],
+        additional: ['images/*'],
+      },
+      externals: ['*.json', 'images/*'],
+    }),
   ],
   babelQuery: {
     cacheDirectory: true,
