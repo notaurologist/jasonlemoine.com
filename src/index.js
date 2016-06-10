@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {install} from 'offline-plugin/runtime';
+install();
 import {Router, Route, IndexRedirect, Redirect, browserHistory} from 'react-router';
 import App from './components/App';
 import About from './components/About/About';
