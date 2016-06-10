@@ -21,19 +21,19 @@ module.exports = require('./webpack.config.base')({
     new ExtractTextPlugin('app.[hash].css', {
       allChunks: true,
     }),
-    new OfflinePlugin({
-      cache: {
-        main: ['index.html', '*.js', '*.css', '*.json'],
-        additional: ['images/*'],
-      },
-      externals: ['*.json', 'images/*'],
-      version: '[hash]',
-    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         screw_ie8: true,
         warnings: false,
       },
+    }),
+    new OfflinePlugin({
+      cache: {
+        main: ['index.html', '*.js', '*.css', '*.json'],
+        additional: ['images/*', '*.woff*'],
+      },
+      externals: ['*.json', 'images/*'],
+      version: '[hash]',
     }),
   ],
   babelQuery: {
