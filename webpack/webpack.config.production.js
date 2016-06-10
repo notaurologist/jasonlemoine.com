@@ -32,8 +32,7 @@ module.exports = require('./webpack.config.base')({
         main: ['index.html', '*.js', '*.css', '*.json'],
         additional: ['images/*', '*.woff*'],
       },
-      externals: ['*.json', 'images/*'],
-      version: '[hash]',
+      externals: ['*.json', 'images/*', '*.woff*'],
     }),
   ],
   babelQuery: {
