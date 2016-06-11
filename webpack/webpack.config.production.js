@@ -4,7 +4,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 
 module.exports = require('./webpack.config.base')({
   devtool: 'source-map',
@@ -26,13 +25,6 @@ module.exports = require('./webpack.config.base')({
         screw_ie8: true,
         warnings: false,
       },
-    }),
-    new OfflinePlugin({
-      cache: {
-        main: ['index.html', '*.js', '*.css', '*.json'],
-        additional: ['images/*', '*.woff*'],
-      },
-      externals: ['*.json', 'images/*', '*.woff*'],
     }),
   ],
   babelQuery: {
